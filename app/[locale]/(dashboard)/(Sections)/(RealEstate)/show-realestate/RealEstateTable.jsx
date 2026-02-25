@@ -48,7 +48,10 @@ export default function RealEstateTable() {
       key: "Property Type",
       label: t("Property.table.type"),
     },
-
+    {
+      key: "Added By",
+      label: t("Property.table.addedBy"),
+    },
     {
       key: "action",
       label: t("Property.table.action"),
@@ -111,7 +114,9 @@ export default function RealEstateTable() {
                 <TableCell className="font-medium text-card-foreground/80">
                   {t(`OfferType.${item.offer_type}`)}
                 </TableCell>
-
+                <TableCell className="font-medium text-card-foreground/80">
+                  {item.added_by || "-"}
+                </TableCell>
                 <TableCell className="ltr:pr-5 rtl:pl-5">
                   {deletingId === item.id ? (
                     <div>

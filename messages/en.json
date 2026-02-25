@@ -1692,6 +1692,7 @@
       "title": "Title",
       "Desc": "Description",
       "type": "Property Type",
+      "addedBy": "Added By",
       "action": "Action",
       "ActionCenter": {
         "title": "Actions",
