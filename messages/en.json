@@ -1693,6 +1693,7 @@
       "Desc": "Description",
       "type": "Property Type",
       "addedBy": "Added By",
+      "ownerName": "Owner",
       "action": "Action",
       "ActionCenter": {
         "title": "Actions",

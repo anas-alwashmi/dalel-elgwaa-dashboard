@@ -28,7 +28,7 @@ export default async function RootLayout({ children, params: { locale } }) {
   const session = await getServerSession(authOptions);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <AuthProvider>
         <TanstackProvider>
           <Providers>

@@ -13,6 +13,7 @@ const Providers = ({ children }) => {
 
   return (
     <body
+      suppressHydrationWarning
       className={cn("dash-tail-app ", inter.className, "theme-" + theme)}
       style={{
         "--radius": `${radius}rem`,

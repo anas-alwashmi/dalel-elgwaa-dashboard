@@ -53,6 +53,10 @@ export default function RealEstateTable() {
       label: t("Property.table.addedBy"),
     },
     {
+      key: "Owner",
+      label: t("Property.table.ownerName"),
+    },
+    {
       key: "action",
       label: t("Property.table.action"),
     },
@@ -116,6 +120,9 @@ export default function RealEstateTable() {
                 </TableCell>
                 <TableCell className="font-medium text-card-foreground/80">
                   {item.added_by || "-"}
+                </TableCell>
+                <TableCell className="font-medium text-card-foreground/80">
+                  {item.owner_name || "-"}
                 </TableCell>
                 <TableCell className="ltr:pr-5 rtl:pl-5">
                   {deletingId === item.id ? (
