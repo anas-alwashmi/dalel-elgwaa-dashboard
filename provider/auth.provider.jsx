@@ -1,15 +1,18 @@
 "use client";
 
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const TokenContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  // You can initialize the token from localStorage, cookies, or leave it null
   const [token, setToken] = useState(null);
 
-  // Optionally, add logic to fetch/set token here
+  useEffect(() => {
+    // Try to load token from localStorage on mount
+    const savedToken = localStorage.getItem("token");
+    if (savedToken) setToken(savedToken);
+  }, []);
 
   return (
     <TokenContext.Provider value={{ token, setToken }}>
